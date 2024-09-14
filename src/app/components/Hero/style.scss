@@ -94,4 +94,18 @@
         }
 
     }
+
+    .hero-usedBy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+        height: 100vh;
+
+        &-copy, 
+        &-logos {
+            width: 30%;
+        }
+    }
 }
