@@ -102,10 +102,15 @@
         width: 95%;
         margin: 0 auto;
         height: 100vh;
+        color: white;
 
         &-copy, 
         &-logos {
             width: 30%;
+        }
+
+        &-copy {
+            text-align: right;
         }
     }
 }

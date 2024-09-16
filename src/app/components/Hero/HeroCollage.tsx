@@ -1,6 +1,12 @@
+"use client"
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useRef } from 'react'
 import {photos, videos} from '@/data'
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP)
 
 function VideoElement({ src }: { src: string }) {
     return (
@@ -33,8 +39,31 @@ export default function HeroCollage() {
     const rightImages = photos.slice(2, photos.length)
 
     const [leftVideo, rightVideo] = videos;
+
+    const container = useRef<HTMLDivElement>(null)
+    const tl = useRef()
+
+    useGSAP(() => {
+        let tl = gsap.timeline({
+            delay: 0.5
+        })
+
+        tl.fromTo('.hero-element', 
+            {
+                y: 300
+            },
+            {
+                y: 0,
+                duration: 1,
+                delay: function(index) {
+                    return 0.2 * index
+                }
+            }
+        )
+    }, {scope: container})
+    
     return (
-        <div className='hero-collage'>
+        <div className='hero-collage' ref={container}>
             <div className="left-column">
                 {leftImages.map((src, idx) => (
                     <ImageElement src={src} key={idx}/>
