@@ -32,8 +32,9 @@ export default function HeroPhoneBlock() {
                 scrollTrigger: {
                     trigger: phoneRef.current,
                     start: 'top top',
-                    end: "+=800",
+                    end: "+=650",
                     scrub: true,
+                    // markers: true
                 }
             });
 

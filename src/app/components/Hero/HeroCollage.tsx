@@ -29,7 +29,8 @@ function ImageElement({ src }: { src: string }) {
             <Image src={src} 
             className='collage-element' 
             alt='' 
-            fill={true}/>
+            fill={true}
+            sizes='(max-width: 100%)'/>
         </div>
     )
 }
