@@ -14,7 +14,9 @@ export default function HeroFooter() {
             scrollTrigger: {
                 trigger: ref.current,
                 start: "top center",
-                scrub: true
+                end: 'top 25%',
+                scrub: true,
+                // markers: true
             }
         })
 
@@ -22,8 +24,8 @@ export default function HeroFooter() {
             { 
                 backgroundColor: 'white', 
                 duration: 0.25,
-            }, 
-            "-=2")
+            },
+        )
     })
 
     return (
