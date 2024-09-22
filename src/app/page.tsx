@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./components/Hero";
 import FeatureSlides from "./components/FeatureSlides"
 import './styles/home.scss'

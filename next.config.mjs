@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    basePath: "/animated-landing-page",
+    output: "export",
+    reactStrictMode: true,
     images: {
         remotePatterns: [
             {

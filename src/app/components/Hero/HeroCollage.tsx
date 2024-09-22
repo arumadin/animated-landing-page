@@ -42,10 +42,9 @@ export default function HeroCollage() {
     const [leftVideo, rightVideo] = videos;
 
     const container = useRef<HTMLDivElement>(null)
-    const tl = useRef()
 
     useGSAP(() => {
-        let tl = gsap.timeline({
+        const tl = gsap.timeline({
             delay: 0.5
         })
 
