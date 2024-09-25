@@ -148,13 +148,33 @@
         height: 100vh;
         color: white;
 
+        @include nonDesktop {
+            height: 800px;
+        }
+
+        @include mobile {
+            height: 650px;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
         &-copy,
         &-logos {
             width: 30%;
+
+            @include mobile {
+                width: 100%;
+                text-align: center;
+            }
         }
 
         &-copy {
             text-align: right;
+
+            @include mobile {
+                text-align: center;
+                margin-bottom: 20px;
+            }
         }
     }
 }
